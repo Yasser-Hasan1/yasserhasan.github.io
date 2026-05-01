@@ -2,25 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Your Name Portfolio</title>
+  <title>Yasser Hasan Portfolio</title>
 
   <style>
     body {
       font-family: Arial;
       text-align: center;
-      background: #111;
+      background: #0f172a;
       color: white;
     }
 
     h1 {
-      margin-top: 50px;
+      margin-top: 60px;
+      font-size: 40px;
+    }
+
+    p {
+      color: #94a3b8;
     }
 
     .webring-container {
-      margin-top: 100px;
+      margin-top: 120px;
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
       align-items: center;
     }
 
@@ -29,7 +34,14 @@
     .right-arrow {
       width: 60px;
       height: 60px;
-      background-color: white;
+      background-color: #38bdf8;
+      transition: 0.2s;
+    }
+
+    .webring-logo:hover,
+    .left-arrow:hover,
+    .right-arrow:hover {
+      transform: scale(1.1);
     }
 
     .webring-logo {
@@ -62,8 +74,8 @@
 
 <body>
 
-  <h1>Your Name</h1>
-  <p>Welcome to my portfolio</p>
+  <h1>Yasser Hasan</h1>
+  <p>Software Developer | Mohawk College</p>
 
   <div class="webring-container">
     <a href="https://mohawk-college-webring.vercel.app/api/previous?from=https://yasserhasan.github.io">
@@ -74,7 +86,7 @@
       <div class="webring-logo"></div>
     </a>
 
-    <a href="https://mohawk-college-webring.vercel.app/api/next?from=https://yourusername.github.io">
+    <a href="https://mohawk-college-webring.vercel.app/api/next?from=https://yasserhasan.github.io">
       <div class="right-arrow"></div>
     </a>
   </div>
