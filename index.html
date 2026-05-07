@@ -1,28 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Yasser Hasan Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yasser Hasan | Portfolio</title>
 
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial;
-      text-align: center;
-      background: #0f172a;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #0f172a, #020617);
       color: white;
+      line-height: 1.6;
     }
 
-    h1 {
-      margin-top: 60px;
-      font-size: 40px;
+    header {
+      padding: 80px 20px;
+      text-align: center;
     }
 
-    p {
+    header h1 {
+      font-size: 55px;
+      margin-bottom: 10px;
+    }
+
+    header p {
       color: #94a3b8;
+      font-size: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 30px;
+      margin-bottom: 30px;
+      backdrop-filter: blur(10px);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #38bdf8;
+      font-size: 28px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill {
+      background: #1e293b;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .project {
+      margin-bottom: 20px;
+    }
+
+    .project h3 {
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    .project p {
+      color: #cbd5e1;
+    }
+
+    .about-text {
+      color: #cbd5e1;
+      font-size: 17px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .footer p {
+      color: #94a3b8;
+      margin-bottom: 30px;
     }
 
     .webring-container {
-      margin-top: 120px;
       display: flex;
       justify-content: center;
       gap: 25px;
@@ -35,13 +115,13 @@
       width: 60px;
       height: 60px;
       background-color: #38bdf8;
-      transition: 0.2s;
+      transition: 0.25s;
     }
 
     .webring-logo:hover,
     .left-arrow:hover,
     .right-arrow:hover {
-      transform: scale(1.1);
+      transform: scale(1.12);
     }
 
     .webring-logo {
@@ -69,26 +149,117 @@
       -webkit-mask-position: center;
       mask-position: center;
     }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 40px;
+      }
+
+      .card {
+        padding: 22px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <h1>Yasser Hasan</h1>
-  <p>Software Developer | Mohawk College</p>
+  <header>
+    <h1>Yasser Hasan</h1>
+    <p>Software Development Student • Mohawk College • Aspiring Full Stack Developer</p>
+  </header>
 
-  <div class="webring-container">
-    <a href="https://mohawk-college-webring.vercel.app/api/previous?from=https://yasser-hasan1.github.io/yasserhasan.github.io/">
-      <div class="left-arrow"></div>
-    </a>
+  <div class="container">
 
-    <a href="https://mohawk-college-webring.vercel.app">
-      <div class="webring-logo"></div>
-    </a>
+    <div class="card">
+      <h2>About Me</h2>
 
-    <a href="https://mohawk-college-webring.vercel.app/api/next?from=https://yasser-hasan1.github.io/yasserhasan.github.io/">
-      <div class="right-arrow"></div>
-    </a>
+      <p class="about-text">
+        I am a Software Development student at Mohawk College with a strong interest in web development,
+        application design, and modern user experiences. I enjoy building projects that combine clean design,
+        functionality, and accessibility while continuously learning new technologies and development practices.
+        <br><br>
+        My experience includes working with Java, C#, .NET, Android development, APIs, databases, and frontend
+        technologies. I am currently focused on expanding my full stack development skills and creating projects
+        that solve real-world problems.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Technical Skills</h2>
+
+      <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Java</div>
+        <div class="skill">C#</div>
+        <div class="skill">.NET</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Android Studio</div>
+        <div class="skill">GitHub</div>
+        <div class="skill">REST APIs</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>Formula 1 Access</h3>
+        <p>
+          A Formula 1 web application featuring race information, standings,
+          driver comparisons, user authentication, and race replay integration.
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>Special Olympics Niagara West App</h3>
+        <p>
+          An Android application designed to improve accessibility and athlete communication
+          through event information, absence forms, and accessibility-focused features.
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>Real-Time Chat Application</h3>
+        <p>
+          A real-time chat system using WebSockets and .NET, allowing users to communicate
+          instantly through a web-based interface.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Education</h2>
+
+      <p class="about-text">
+        <strong>Mohawk College</strong><br>
+        Software Development Program<br>
+        Expected Graduation: 2026
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>Part of the Mohawk College Webring</p>
+
+    <div class="webring-container">
+
+      <a href="https://mohawk-college-webring.vercel.app/api/previous?from=https://yasser-hasan1.github.io/yasserhasan.github.io/">
+        <div class="left-arrow"></div>
+      </a>
+
+      <a href="https://mohawk-college-webring.vercel.app">
+        <div class="webring-logo"></div>
+      </a>
+
+      <a href="https://mohawk-college-webring.vercel.app/api/next?from=https://yasser-hasan1.github.io/yasserhasan.github.io/">
+        <div class="right-arrow"></div>
+      </a>
+
+    </div>
   </div>
 
 </body>
